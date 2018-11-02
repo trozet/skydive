@@ -32,6 +32,7 @@ import (
 
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
+
 	// Viper remote client need to be internally initialized
 	_ "github.com/spf13/viper/remote"
 
@@ -142,6 +143,11 @@ func init() {
 	cfg.SetDefault("opencontrail.host", "localhost")
 	cfg.SetDefault("opencontrail.mpls_udp_port", 51234)
 	cfg.SetDefault("opencontrail.port", 8085)
+
+	cfg.SetDefault("opendaylight.host", "localhost")
+	cfg.SetDefault("opendaylight.port", 8181)
+	cfg.SetDefault("opendaylight.user", "admin")
+	cfg.SetDefault("opendaylight.password", "admin")
 
 	cfg.SetDefault("ovs.ovsdb", "unix:///var/run/openvswitch/db.sock")
 	cfg.SetDefault("ovs.oflow.enable", false)
